@@ -22,6 +22,7 @@ import UserPreferences from "components/User/UserPreferences.vue";
 import DatasetList from "components/Dataset/DatasetList.vue";
 import { getUserPreferencesModel } from "components/User/UserPreferencesModel";
 import CustomBuilds from "components/User/CustomBuilds.vue";
+import UserAPIKey from "components/User/UserAPIKey";
 import Tours from "mvc/tours";
 import GridView from "mvc/grid/grid-view";
 import GridShared from "mvc/grid/grid-shared";
@@ -389,6 +390,10 @@ export const getAnalysisRouter = (Galaxy) => {
                 return;
             }
             this._display_vue_helper(CustomBuilds);
+        },
+
+        show_api_key: function () {
+            this._display_vue_helper(UserAPIKey);
         },
 
         show_dataset_edit_attributes: function (params) {
